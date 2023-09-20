@@ -1,4 +1,3 @@
-import React from 'react'
 import RegularList from './RegularList';
 import { Eye, Star } from 'react-flaticons';
 
@@ -9,7 +8,9 @@ const MealsItems = ({ meals }) => {
         return (
             <div className='my-[60px]'>
                 <h1 className='text-head-line font-bold text-[20px]'>{title}</h1>
-                <div className='mt-4 mb-16'>{<RegularList items={children} resourceName="meals" itemComponent={MealsItems} />}</div>
+                <div className='mt-4 mb-16'>
+                    {<RegularList items={children} resourceName="meals" itemComponent={MealsItems} />}
+                </div>
             </div>
         )
     } else {
