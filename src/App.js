@@ -1,23 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import Categories from "./components/Categories";
+import Payment from "./components/Payment";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="pt-24 w-full">
+      <main className="bg-bg-color flex justify-center gap-11  h-screen pt-14">
+        <section className="w-1/2 rounded-md bg-white shadow-md overflow-y-hidden">
+          <Categories />
+        </section>
+        <section className="w-1/4 h-3/4 overflow-hidden rounded-md bg-white shadow-md ">
+          <Payment />
+        </section>
+      </main>
     </div>
   );
 }
