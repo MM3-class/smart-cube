@@ -21,7 +21,7 @@ const MealsItems = ({ meals }) => {
                 </div>
                 <div className='truncate overflow-hidden ml-2 cursor-pointer space-y-2'>
                     <p className='text-primary'>{title}</p>
-                    <label className='flex space-x-6 items-center relative'>
+                    <label className='flex space-x-6 items-center relative px-2'>
                         <p className='text-[14px]'>AED {price}</p>
                         <p className='text-secondary flex gap-2 items-center'>{rate} <span><Star /></span></p>
                         <p className='truncate text-[14px] text-sub-title'>{subTitle}</p>
