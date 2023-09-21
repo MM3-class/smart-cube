@@ -15,18 +15,19 @@ const MealsItems = ({ meals }) => {
         )
     } else {
         return (
-            <div className='border-b mb-2 py-2 pt-0 flex items-center w-full cursor-pointer'>
-                <div className='w-[172px] h-[72px]'>
-                    <img className='w-full h-full object-cover' src={image} alt={title} />
+            <div className='border-b lg:mb-2 lg:py-2 py-12 my-4 pt-0 flex flex-row-reverse lg:flex-row sm:justify-evenly justify-between items-center w-full cursor-pointer'>
+                <div className='lg:w-[172px] lg:h-[72px] w-[150px] h-[105px] relative'>
+                    <img className='w-full h-full lg:object-contain object-fill' src={image} alt={title} />
+                    <button className='lg:hidden absolute -bottom-4 w-[80%] right-1/2 translate-x-1/2 bg-white text-red-500 border-[1px] border-red-500 p-2'>Add</button>
                 </div>
                 <div className='truncate overflow-hidden ml-2 cursor-pointer space-y-2'>
-                    <p className='text-primary'>{title}</p>
+                    <p className='lg:text-primary text-black'>{title}</p>
                     <label className='flex space-x-6 items-center relative px-2'>
-                        <p className='text-[14px]'>AED {price}</p>
-                        <p className='text-secondary flex gap-2 items-center'>{rate} <span><Star /></span></p>
-                        <p className='truncate text-[14px] text-sub-title'>{subTitle}</p>
-                        <p className='text-sub-title cursor-pointer'><Eye /></p>
-                        <input className='cursor-pointer' type="checkbox" />
+                        <p className='text-[14px] font-bold lg:font-normal'>AED {price}</p>
+                        <p className='text-secondary gap-2 items-center hidden lg:flex'>{rate} <span><Star /></span></p>
+                        <p className='truncate text-[14px] text-sub-title hidden lg:block'>{subTitle}</p>
+                        <p className='text-sub-title cursor-pointer hidden lg:block'><Eye /></p>
+                        <input className='cursor-pointer hidden lg:block' type="checkbox" />
                     </label>
                 </div>
             </div>

@@ -5,8 +5,8 @@ import Payment from "./components/Payment";
 function App() {
   return (
     <main className="w-full h-screen relative ">
-      <div className="bg-bg-color flex justify-center gap-11 pt-14">
-        <section className="w-1/2 rounded-lg bg-white shadow-md overflow-y-hidden">
+      <div className="bg-bg-color flex justify-center gap-11 lg:pt-14">
+        <section className="lg:w-1/2 sm:w-3/4 rounded-lg bg-white shadow-md overflow-y-hidden">
           <Categories />
         </section>
 
