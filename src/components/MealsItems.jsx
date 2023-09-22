@@ -1,5 +1,5 @@
 import RegularList from './RegularList';
-import { Eye, Star } from 'react-flaticons';
+import { Check, Eye, Star } from 'react-flaticons';
 
 const MealsItems = ({ meals }) => {
     const { title, price, subTitle, rate, image, children } = meals || {}
@@ -27,7 +27,10 @@ const MealsItems = ({ meals }) => {
                         <p className='text-secondary gap-2 items-center hidden lg:flex'>{rate} <span><Star /></span></p>
                         <p className='truncate text-[14px] text-sub-title hidden lg:block'>{subTitle}</p>
                         <p className='text-sub-title cursor-pointer hidden lg:block'><Eye /></p>
-                        <input className='cursor-pointer hidden lg:block' type="checkbox" />
+                        <div className='cursor-pointer'>
+                            <input className='relative hidden peer lg:block appearance-none w-6 h-6 rounded-full bg-white border checked:bg-blue-700' type="checkbox" />
+                            <Check className='mt-[5px] ml-[6px] w-3 h-3 top-0 text-white absolute peer-checked:block' />
+                        </div>
                     </label>
                 </div>
             </div>
